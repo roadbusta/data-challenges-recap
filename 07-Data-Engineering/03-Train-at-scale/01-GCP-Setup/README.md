@@ -5,7 +5,7 @@ In this series of exercises, you will learn how to deploy your code to [Google C
 Beyond training models, you will see how you can make your models available to the world, manage different versions and serve predictions at scale.
 
 <details>
-  <summary> 🚨 If you are a student of the <strong>Part-Time Bootcamp</strong>, go back to the setup to create a GCP account now: </summary>
+  <summary> 🚨 If you are a student of the <strong>Part-Time Bootcamp</strong>, go back to the setup to create a GCP account now </summary>
 
 
 👉 Go to the **Google Cloud Platform setup** section of the `data-setup` repo:
