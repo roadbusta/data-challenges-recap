@@ -21,3 +21,7 @@ def my_multimodes(samples):
 def my_median(samples):
     '''returns the median of the observations'''
     pass  # YOUR CODE HERE
+
+
+# add an ifmain block here in order to test your code
+pass  # YOUR CODE HERE
