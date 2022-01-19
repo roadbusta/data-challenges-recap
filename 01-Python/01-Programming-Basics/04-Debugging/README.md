@@ -57,7 +57,7 @@ ipdb> sys.argv
 # => ['hello.py', 'john', 'lennon']
 ```
 
-See how it works? You just asked the debugger to call `sys.argv` and look at what is stored in this list.
+See how it works? You just asked the debugger to call `sys.argv` and look at what is stored in this list. [`sys.argv`](https://docs.python.org/3/library/sys.html#sys.argv) is a python **list** containing the command line arguments passed to a Python script. `argv[0]` is always the script name.
 
 Our problem is that there is a missing space between `John` and `Lennon`. So we would like to have a look at the local variable `name`. Let's type:
 
