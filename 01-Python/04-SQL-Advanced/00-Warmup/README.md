@@ -26,11 +26,11 @@ To test your code, don't run `make` just yet, instead try to run the code yourse
 If something feels weird, you can **debug** your code by adding a **breaking point** with:
 
 ```python
-import ipdb; ipdb.set_trace()
+breakpoint()
 ```
 
 That way you can inspect the local variables at the breaking point and check your assumption about the code (what variables hold what? what are the types?). Getting good as debugging code is a critical skill to develop throughout the bootcamp!
 
-In the end, check your challenge with `make`. Be careful not to commit any `import pdb; pdb.set_trace()` as you would mess up the tests (locally and on Kitt!)
+In the end, check your challenge with `make`. Be careful not to commit any `breakpoint()` as you would mess up the tests (locally and on Kitt!)
 
 Have fun!
