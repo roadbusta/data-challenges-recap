@@ -340,8 +340,8 @@ And it should look like this once filled with data:
 receipts_dict
 => {
     "date": ['22-10-2017','23-10-2017','26-10-2017',...],
-    "quantity": [123, 232, 134, ...],
-    "amount": [1234.53, 1563.30, 2345.00, ...]
+    "quantity": ['123', '232', '134', ...],
+    "amount": ['1234.53', '1563.30', '2345.00', ...]
    }
 ```
 
@@ -412,11 +412,11 @@ If you add this line to your loop you should see all the data you found.
 
 ```
 =>
-    date: 02-01-2017, amount: 3097.00, quantity: 163
-    date: 05-01-2017, amount: 935.00, quantity: 110
-    date: 23-01-2017, amount: 2808.00, quantity: 156
-    date: 31-01-2017, amount: 4368.00, quantity: 182
-    date: 06-02-2017, amount: 1988.50, quantity: 97
+    date: 02-01-2017, amount: '3097.00', quantity: '163'
+    date: 05-01-2017, amount: '935.00', quantity: '110'
+    date: 23-01-2017, amount: '2808.00', quantity: '156'
+    date: 31-01-2017, amount: '4368.00', quantity: '182'
+    date: 06-02-2017, amount: '1988.50', quantity: '97'
         ...
 ```
 
@@ -449,8 +449,8 @@ Before going to the next step make sure your dictionary looks something like thi
 receipts_dict
 => {
     "date": ['22-10-2017','23-10-2017','26-10-2017',...],
-    "quantity": [123, 232, 134, ...],
-    "amount": [1234.53, 1563.30, 2345.00, ...]
+    "quantity": ['123', '232', '134', ...],
+    "amount": ['1234.53', '1563.30', '2345.00', ...]
    }
 ```
 
