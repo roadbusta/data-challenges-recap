@@ -10,7 +10,7 @@ If any of these is unclear, ask for a TA.
 In order to iterate, we will need a few packages:
 
 ``` bash
-pip install category_encoders memoized_property psutil xgboost pygeohash
+pip install category-encoders memoized-property psutil xgboost pygeohash
 ```
 
 We are going to modify the `trainer.py` in order to push the training parameters and metrics to **MLflow**.

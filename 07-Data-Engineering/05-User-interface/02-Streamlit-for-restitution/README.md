@@ -34,7 +34,7 @@ gh repo create
 Go to the GitHub repo in order to make sure that everything is ok:
 
 ``` bash
-gh repo view --web
+gh browse
 ```
 
 The repository is empty, which is normal since we have not pushed any code yet...
@@ -195,12 +195,18 @@ Now, we can login to **Heroku**
 heroku login
 ```
 
+Upload the **public** SSH key created during the setup in order to authentify to **Heroku** using SSH
+
+``` bash
+heroku keys:add ~/.ssh/id_ed25519.pub
+```
+
 Create an app for our website on **Heroku**... Remember the app name should be unique on the internet.
 
 💡 You might want to [change the region](https://devcenter.heroku.com/articles/regions) if you are not located inside of Europe...
 
 ```bash
-heroku create YOUR_APP_NAME --region eu
+heroku create --ssh-git YOUR_APP_NAME --region eu
 ```
 
 Remember that **Heroku** uses git in order to retrieve the files of your project to put in production.

@@ -17,10 +17,10 @@ python hello.py john lennon
 What is the problem with the output of this program? It seems there is a problem with the creation of the concatenated full name. Let's try to debug this! Insert the following line just after `def full_name`:
 
 ```python
-import ipdb; ipdb.set_trace()
+breakpoint()
 ```
 
-`import ipdb` will import the [ipdb](https://pypi.org/project/ipdb/) module while `ipdb.set_trace()` will allow us to pause the program at a certain line.
+`breakpoint()` will allow us to pause the program at a certain line (it calls `ipdb.set_trace()` under the hood).
 
 Go back to the terminal and run the command again:
 
@@ -39,11 +39,7 @@ The program will **pause** at the line where you inserted the `pdb.set_trace()`:
 ipdb>
 ```
 
-ℹ️ `ipdb` is not a module which is available by default in Python, so you need to `pip install ipdb` (something we did on setup day). Alternatively, you can use the default `pdb` module embedded in Python:
-
-```python
-import pdb; pdb.set_trace()
-```
+ℹ️ `ipdb` is not a module which is available by default in Python, so you need to `pip install ipdb` (something we did on setup day).
 
 It's time to play with the debugger. From here, you can do two things:
 
@@ -57,7 +53,7 @@ ipdb> sys.argv
 # => ['hello.py', 'john', 'lennon']
 ```
 
-See how it works? You just asked the debugger to call `sys.argv` and look at what is stored in this list.
+See how it works? You just asked the debugger to call `sys.argv` and look at what is stored in this list. [`sys.argv`](https://docs.python.org/3/library/sys.html#sys.argv) is a python **list** containing the command line arguments passed to a Python script. `argv[0]` is always the script name.
 
 Our problem is that there is a missing space between `John` and `Lennon`. So we would like to have a look at the local variable `name`. Let's type:
 
@@ -119,7 +115,7 @@ Fix the `full_name` method in `hello.py`, and run the program again. Don't forge
 
 The previous section was about understanding the basic commands of the debugger. You can think of it as a DVD player with the following buttons:
 
-- Pause (`pdb.set_trace()` in the source code)
+- Pause (`breakpoint()` in the source code)
 - Next frame (`next`)
 - Play (`continue`)
 

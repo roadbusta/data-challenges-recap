@@ -5,7 +5,7 @@ Before doing anything here, please make sure _**you are inside of the `lewagon` 
 Now you can install the `packgenlite` tool:
 
 ```bash
-pip install git+https://github.com/krokrob/packgenlite
+pip install git+ssh://git@github.com/krokrob/packgenlite
 ```
 
 As seen in this morning's lecture, quite a lot of things have happened. You have installed:

@@ -8,4 +8,4 @@ In this warm-up challenge, we will simply run a Logit model for `dim_is_one_star
 
 We will also compare it to a Logit model for `dim_is_five_star`.
 
-Open the notebook `logit.ipynb` and follow instructions.
+Open the notebook `logit.ipynb` and follow the instructions.

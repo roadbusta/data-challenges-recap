@@ -35,9 +35,21 @@ Here are the seller and customer workflows:
 
 ## Dataset
 
-The dataset consists of 100k orders from 2016 and 2018 that were made on the Olist store, available as a csv on [Kaggle](https://www.kaggle.com/olistbr/brazilian-ecommerce)
+The dataset consists of ~100k orders from 2016 and 2018 that were made on the Olist store, available as csv files on Le Wagon S3 bucket (❗️the datasets available on Kaggle may be slightly different).
 
-✅ Download the 9 datasets and store them in your `~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv` folder.
+✅ Download the 9 datasets compressed in the `olist.zip` file, unzip it and store them in your `~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv` folder:
+
+```bash
+curl https://wagon-public-datasets.s3.amazonaws.com/olist/olist.zip > ~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv/olist.zip
+unzip -d ~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv/ ~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv/olist.zip
+rm -rf ~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv/olist.zip
+```
+
+Check you have the 9 datasets on your machine:
+
+```bash
+ls ~/code/<user.github_nickname>/data-challenges/04-Decision-Science/data/csv
+```
 
 ## Setup
 

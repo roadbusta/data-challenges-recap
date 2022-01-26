@@ -222,7 +222,11 @@ web: sh setup.sh && streamlit run app.py
 <br>
 
 ``` bash
-heroku create <unique-app-name>
+heroku keys:add ~/.ssh/id_ed25519.pub  # in order to authentify using SSH
+```
+
+``` bash
+heroku create --ssh-git <unique-app-name>  # using a SSH remote
 ```
 
 </details>

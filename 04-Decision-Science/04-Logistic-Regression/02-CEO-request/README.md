@@ -52,4 +52,4 @@ You have until the end of the Communicate topic to produce the following analysi
 - Should Olist acquire new sellers, with some cost assumptions to be suggested?
 - ...
 
-### Tomorrow evening you will present your analysis to your favorite TAs & classmates!
+### In next session's recap, you will present your analysis to your favorite TAs & classmates!

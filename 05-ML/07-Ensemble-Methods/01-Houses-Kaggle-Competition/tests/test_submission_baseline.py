@@ -3,7 +3,7 @@ from nbresult import ChallengeResultTestCase
 class TestSubmissionBaseline(ChallengeResultTestCase):
 
     def test_score_baseline(self):
-        self.assertLess(self.result.score_baseline, 0.18)
+        self.assertLess(self.result.score_baseline, 0.23)
 
     def test_submission_shape(self):
         self.assertEqual(self.result.submission_shape, (1459,2))

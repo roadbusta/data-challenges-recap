@@ -6,7 +6,7 @@ class TestGetData(ChallengeResultTestCase):
         self.assertEqual(self.result.keys_len, 9)
 
     def test_columns(self):
-        self.assertEqual(
+        self.assertListEqual(
             self.result.columns, [
                 'seller_city',
                 'seller_id',
@@ -19,4 +19,4 @@ class TestGetData(ChallengeResultTestCase):
         keys = ['customers', 'geolocation', 'order_items', 'order_payments',
                 'order_reviews', 'orders', 'product_category_name_translation',
                 'products', 'sellers']
-        self.assertEqual(self.result.keys, keys)
+        self.assertListEqual(self.result.keys, keys)

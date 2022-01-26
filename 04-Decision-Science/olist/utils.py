@@ -5,7 +5,7 @@ import seaborn as sns
 
 def haversine_distance(lon1, lat1, lon2, lat2):
     """
-    Compute distance between two pairs of (lat, lng)
+    Compute distance between two pairs of coordinates (lon1, lat1, lon2, lat2)
     See - (https://en.wikipedia.org/wiki/Haversine_formula)
     """
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
@@ -31,6 +31,7 @@ def return_significative_coef(model):
                           on='variable')\
                    .query("p_value<0.05").sort_values(by='coef',
                                                       ascending=False)
+
 
 def plot_kde_plot(df, variable, dimension):
     """

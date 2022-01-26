@@ -26,4 +26,4 @@ class TestWeather(unittest.TestCase):
     def test_weather_forecast(self):
         forecast = weather.weather_forecast(44418)
         self.assertIsInstance(forecast, list, "Did you select the `consolidated_weather` key?")
-        self.assertEqual(forecast[0]['applicable_date'], datetime.date.today().strftime('%Y-%m-%d'))
+        self.assertTrue(forecast[0].get('applicable_date'))

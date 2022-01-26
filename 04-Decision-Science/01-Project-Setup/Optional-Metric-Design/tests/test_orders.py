@@ -17,4 +17,4 @@ class TestOrders(ChallengeResultTestCase):
       self.assertEqual(self.result.key_names, sorted_key_names)
     
     def test_reviews_number(self):
-      self.assertEqual(self.result.reviews_number, 100000)
+      self.assertEqual(self.result.reviews_number, 99224)

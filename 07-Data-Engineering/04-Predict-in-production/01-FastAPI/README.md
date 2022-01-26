@@ -311,7 +311,7 @@ We just need to store the resulting prediction in our **json** response:
 
 ``` json
 {
-  "prediction": 1.234
+  "fare": 1.234
 }
 ```
 

@@ -8,7 +8,7 @@ This model will be a linear model **`fare_amount ~ C * distance`**.
 
 ### Packaging
 
-Remember that a packaged python project is nothing more than
+Remember that a packaged python project is nothing more than:
 - a (main) directory containing a set of directories and sub directories containing files
 - having a `setup.py` file at the root (the main directory) of the project
 - having a `requirements.txt` file at the root of the project listing the packages required in order for the project to function correctly

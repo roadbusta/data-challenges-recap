@@ -44,7 +44,7 @@ Try updating the code of `phone_book.py` to ignore the header (first line) and o
 ```bash
 Lennon: 123
 Harrisson: 456
-Saunier: 123
+Starr: 789
 ```
 
 ## Optional

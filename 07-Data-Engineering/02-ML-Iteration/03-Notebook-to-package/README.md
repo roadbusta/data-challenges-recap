@@ -24,7 +24,7 @@ Let's create a packaged project from the code of the notebook. In order to achie
 - Install the `packgenlite` package from GitHub
 
 ``` bash
-pip install git+https://github.com/krokrob/packgenlite
+pip install git+ssh://git@github.com/krokrob/packgenlite
 ```
 
 - Create a new packaged project called `TaxiFareModel` in your *projects directory*: `~/code/<user.github_nickname>`.
@@ -70,6 +70,7 @@ cp -r ~/code/<user.github_nickname>/data-challenges/07-Data-Engineering/02-ML-It
 └── tests
     └── __init__.py
 ```
+*You won't see the hidden files which start with a dot `.` - to see them, run the `tree` command with the `-a` flag which will show you all the files (`tree -a`). If you want to limit the amount of information output by the tree command, use the `-I` flag in order to ignore one or more patterns: `tree -a -I .git` to ignore the `.git` directory, `tree -a -I ".git|__pycache__"` to ignore several patterns: here the `.git` directory and the `__pycache__` directories*
 
 👍 Your package is ready to be implemented!
 

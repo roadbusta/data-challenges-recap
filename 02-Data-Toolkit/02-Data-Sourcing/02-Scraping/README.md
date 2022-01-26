@@ -402,7 +402,7 @@ all_books_df.to_csv("books.csv")
 If you'd rather have a regular Excel file, it's possible!
 
 ```bash
-pip install xlsxwriter
+pip install XlsxWriter
 ```
 
 ```python

@@ -85,7 +85,7 @@ Is it working? Did you successfully grab London's `woeid`? Some questions for yo
 
 To answer those questions, don't hesitate to `print()` or **even better**, [debug](https://pypi.org/project/ipdb/). This first week is a good time to sharpen your debugging skills before diving into more advanced topics. Don't remember how to do it? Remember yesterday's challenge in which you had to insert this line in your code:
 ```python
-import ipdb; ipdb.set_trace()
+breakpoint()
 ```
 
 And run the file with:
@@ -94,7 +94,7 @@ And run the file with:
 python test_api.py
 ```
 
-It will stop execution at the line where you added the `ipdb.set_trace()` and open a command line. From there you can check the `url`, `response`, `city` or any other variable you defined in the code!
+It will stop execution at the line where you added the `breakpoint()` and open a command line. From there you can check the `url`, `response`, `city` or any other variable you defined in the code!
 
 
 ## Let the challenge begin!

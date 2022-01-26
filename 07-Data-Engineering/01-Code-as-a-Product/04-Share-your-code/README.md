@@ -9,7 +9,7 @@ Remember the `packgenlite` package right ?
 You were able to install it in your virtual environment by running:
 
 ```bash
-pip install git+https://github.com/krokrob/packgenlite
+pip install git+ssh://git@github.com/krokrob/packgenlite
 ```
 
 Well, the parameter provided to `pip` is just the decorated URL address of the [packgenlite GitHub repo](https://github.com/krokrob/packgenlite). Follow the link and inspect its code... Very similar to the one of our packages 👌
@@ -28,7 +28,7 @@ You are also able to play with its scripts. We will do the same thing with our p
 🤔 So why can't your classmates install your package by using:
 
 ```bash
-pip install git+https://github.com/<user.github_nickname>/mlproject
+pip install git+ssh://git@github.com/<user.github_nickname>/mlproject
 ```
 
 👉 You haven't created a public GitHub repository for your package yet!
@@ -109,7 +109,7 @@ git remote -v
 You can also view the repository directly on github with:
 
 ```bash
-gh repo view --web
+gh browse
 ```
 
 🤔 Doesn't look like any of our code is there yet?  We still need to push our work from the local repository on our machine up to github!
@@ -148,7 +148,7 @@ or like:
 
 Publish the `pip install` command on the slack channel of the batch, for your colleagues to install your package and run your function 🥳
 
-💡 __the command should look like `pip install git+https://github.com/<user.github_nickname>/PACKAGE_NAME`__
+💡 __the command should look like `pip install git+ssh://git@github.com/<user.github_nickname>/PACKAGE_NAME`__
 
 Your colleagues must have done the same thing... Add all their packages to a `requirements.txt` file and test their functions 🔥
 
@@ -174,7 +174,7 @@ You can skip the following section as it is a pure bonus, but definitely worth r
 
 This section is for your general knowledge and will not be useful until you really want to opensource a package.
 
-You probably wondered how to install your package with the `pip install PACKAGE_NAME` command rather than `pip install git+https://github.com/<user.github_nickname>/PACKAGE_NAME`...
+You probably wondered how to install your package with the `pip install PACKAGE_NAME` command rather than `pip install git+ssh://git@github.com/<user.github_nickname>/PACKAGE_NAME`...
 
 ### Process to fully opensource your package:
 
