@@ -48,7 +48,7 @@ What is the list of all the names of all the directors sorted in alphabetical or
 
 ### List of movies about "love"
 
-What are the movies which contain the word "love" in their title, sorted in alphabetical order?
+What are the movies which contain the exact word "love" in their title, sorted in alphabetical order?
 
 ### Number of directors named like...
 

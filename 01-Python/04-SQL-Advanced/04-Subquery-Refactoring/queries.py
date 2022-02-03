@@ -13,7 +13,7 @@ def best_customers(db):
     pass  # YOUR CODE HERE
 
 def top_ordered_product_per_customer(db):
-    # return the list of the top ordered product by each customer based on the total ordered amount
+    # return the list of the top ordered product by each customer based on the total ordered amount in USD
     pass  # YOUR CODE HERE
 
 def average_number_of_days_between_orders(db):

@@ -44,7 +44,7 @@ Can you see that the main part has already been done in the 2 previous questions
 
 ### Top ordered products
 
-- Implement `top_ordered_product_per_customer` to get the list of the top ordered product by each customer, based on the total ordered amount and sorted decreasingly.
+- Implement `top_ordered_product_per_customer` to get the list of the top ordered product by each customer, based on the total ordered amount in **USD** and sorted decreasingly.
 - This function should return a list of tuples like (`CustomerID`, `ProductID`, `OrderedAmount`).
 
 ### Average number of days between orders

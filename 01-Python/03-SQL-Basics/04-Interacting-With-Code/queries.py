@@ -11,7 +11,8 @@ def directors_list(db):
 
 
 def love_movies(db):
-    # return the list of all movies which contain the word "love" in their title, sorted in alphabetical order
+    # return the list of all movies which contain the exact word "love"
+    # in their title, sorted in alphabetical order
     pass  # YOUR CODE HERE
 
 
@@ -21,5 +22,6 @@ def directors_named_like_count(db, name):
 
 
 def movies_longer_than(db, min_length):
-    # return this list of all movies which are longer than a given duration, sorted in the alphabetical order
+    # return this list of all movies which are longer than a given duration,
+    # sorted in the alphabetical order
     pass  # YOUR CODE HERE
