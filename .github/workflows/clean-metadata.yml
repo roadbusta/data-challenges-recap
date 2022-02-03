@@ -1,0 +1,46 @@
+name: Clean notebooks metadata
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  clean-metadata:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Add pipconf
+        run: |
+          mkdir ~/.pip
+          cat << EOF >> ~/.pip/pip.conf
+          [global]
+          trusted-host = pypi.fury.io
+          extra-index-url = https://${{ secrets.GEMFURY_PULL_TOKEN }}@pypi.fury.io/ssaunier
+          EOF
+
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install wagon_common nbcleanmeta
+
+      - name: Cleaning
+        id: cleaning
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          echo "done"
+          git diff --name-only --diff-filter AM "origin/${{ github.event.repository.default_branch }}" | sed 's/^/"/g' | sed 's/$/"/g' | tr '\n' ' '
+          echo "node"
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
