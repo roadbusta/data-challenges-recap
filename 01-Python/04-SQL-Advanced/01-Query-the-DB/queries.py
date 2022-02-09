@@ -5,7 +5,8 @@ def query_orders(db):
     pass  # YOUR CODE HERE
 
 def get_orders_range(db, date_from, date_to):
-    # return a list of orders displaying all columns with OrderDate between date_from and date_to
+    # return a list of orders displaying all columns with OrderDate between
+    # date_from and date_to (excluding date_from and including date_to)
     pass  # YOUR CODE HERE
 
 def get_waiting_time(db):
