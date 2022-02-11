@@ -109,9 +109,7 @@ Now in your terminal run:
 cd ~/code/<user.github_nickname>/data-challenges/04-Decision-Science && echo "export PYTHONPATH=\"$(pwd):\$PYTHONPATH\""
 ```
 
-👉 Copy the output line at the bottom of your `~/.zshrc` file.
-
-⚠️ Restart all your terminal windows to take into account this change.
+👉 Copy the resulting output line from your terminal and paste it at the bottom of your ~/.zshrc file. Don't forget to save and restart all your terminal windows to take into account this change.
 
 
 
