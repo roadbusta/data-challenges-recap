@@ -19,7 +19,7 @@ __pycache__
 06-Deep-Learning/**/*.txt
 *.zip
 mlruns
-
+*.sqlite
 # IDE #
 *.vscode
 
