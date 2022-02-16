@@ -2,6 +2,9 @@
 
 Now we are going to dive into `JOIN` queries to read data from multiple tables. Again, [this picture](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) on `JOIN` queries is really helpful.
 
+## Data
+We know the drill, let's get that `ecommerce.sqlite` file in our `data` directory and let's get started. 
+
 ## Specs
 
 👉 Complete the code in `join_queries.py`. Each method takes a `db` argument, which is a Cursor Object on which you can call the `execute` method. Exactly like in the previous exercise.

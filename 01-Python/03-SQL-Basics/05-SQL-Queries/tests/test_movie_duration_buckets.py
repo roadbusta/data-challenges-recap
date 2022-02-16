@@ -34,6 +34,6 @@ class TestMovieDurationBuckets(unittest.TestCase):
             (900, 1),
             (1020, 1)
         ]
-        self.assertIs(type(solution), list)
-        self.assertIs(type(solution[0]), tuple)
+        self.assertIs(type(res), list)
+        self.assertIs(type(res[0]), tuple)
         self.assertEqual(res, solution)
