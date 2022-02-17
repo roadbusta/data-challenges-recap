@@ -20,6 +20,8 @@ SELECT
 FROM TemporaryTableName
 
 ```
+## Data
+We know the drill, let's get that `ecommerce.sqlite` file in our `data` directory and let's get started. 
 
 ## Specs
 

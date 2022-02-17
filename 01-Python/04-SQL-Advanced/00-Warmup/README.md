@@ -2,6 +2,12 @@
 
 Let's start the day with a **Warm-Up** challenge and a quick `SELECT` statement.
 
+## Data
+We will work with the `school.sqlite` database available at this URL:  
+`https://wagon-public-datasets.s3.amazonaws.com/sql_databases/school.sqlite`
+
+Using your preferred method, place the `school.sqlite` file in the `data` directory of this challenge.
+
 ## Database Discovery
 
 Open the `data/school.sqlite` with DBeaver and have a look at the schema.

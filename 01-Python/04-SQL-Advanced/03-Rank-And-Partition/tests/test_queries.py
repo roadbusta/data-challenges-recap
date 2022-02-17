@@ -1,14 +1,30 @@
 # pylint: disable-all
 import unittest
-from queries import order_rank_per_customer, order_cumulative_amount_per_customer
 import sqlite3
+import subprocess
+from memoized_property import memoized_property
 
-conn = sqlite3.connect('data/ecommerce.sqlite')
-db = conn.cursor()
+from queries import order_rank_per_customer, order_cumulative_amount_per_customer
 
 class TestQueries(unittest.TestCase):
+
+    @memoized_property
+    def stubs(self):
+        # Download the database
+        subprocess.call(
+            [
+                "curl", "https://wagon-public-datasets.s3.amazonaws.com/sql_databases/ecommerce.sqlite", "--output",
+                "data/ecommerce.sqlite"
+            ])
+
+    def setUp(self):
+        super().setUp()
+        self.stubs
+        conn = sqlite3.connect('data/ecommerce.sqlite')
+        self.db = conn.cursor()
+
     def test_order_rank_per_customer(self):
-        results = order_rank_per_customer(db)
+        results = order_rank_per_customer(self.db)
         expected = [
             (1, 1, '2012-01-04', 1),
             (8, 1, '2012-06-13', 2),
@@ -38,7 +54,7 @@ class TestQueries(unittest.TestCase):
         self.assertEqual(results[-1], expected[-1])
 
     def test_order_cumulative_amount_per_customer(self):
-        results = order_cumulative_amount_per_customer(db)
+        results = order_cumulative_amount_per_customer(self.db)
         results = [ (result[0], result[1], result[2], round(result[3], 1)) for result in results ]
         expected = [
             (1, 1, '2012-01-04', 48.0),

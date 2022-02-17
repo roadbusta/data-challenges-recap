@@ -4,6 +4,12 @@ The goal of this challenge is to query fetch information from multiple tables us
 
 To acquire instant Jedi skills in `JOIN` queries, [read this](http://stackoverflow.com/questions/17946221/sql-join-and-different-types-of-joins) - the picture is really helpful.
 
+## Data
+We will work with the `movies.sqlite` database available at this URL:  
+`https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite`
+
+Using your preferred method, place the `movies.sqlite` file in the `data` directory of this challenge.
+
 ## Specs
 
 Complete the code in `queries.py`. Each function takes a `db` argument, which is a cursor connected to the database, on which you can call the `execute` function. Exactly like in the previous exercise.

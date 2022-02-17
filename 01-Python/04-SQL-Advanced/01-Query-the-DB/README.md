@@ -2,6 +2,12 @@
 
 Now it is time to make advanced SQL requests to an `ecommerce` database!
 
+## Data
+We will work with the `ecommerce.sqlite` database available at this URL:  
+`https://wagon-public-datasets.s3.amazonaws.com/sql_databases/ecommerce.sqlite`
+
+Using your preferred method, place the `ecommerce.sqlite` file in the `data` directory of this challenge.
+
 ## Specs
 
 Open the file `queries.py` to answer the following questions. Don't forget you can look inside the database by using DBeaver.

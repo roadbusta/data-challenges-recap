@@ -1,14 +1,29 @@
 # pylint: disable-all
 import unittest
-from queries import movie_duration_buckets
 import sqlite3
+from memoized_property import memoized_property
+import subprocess
 
-conn = sqlite3.connect('data/movies.sqlite')
-db = conn.cursor()
+from queries import movie_duration_buckets
 
 class TestMovieDurationBuckets(unittest.TestCase):
+    @memoized_property
+    def stubs(self):
+        # Download the database
+        subprocess.call(
+            [
+                "curl", "https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite", "--output",
+                "data/movies.sqlite"
+            ])
+
+    def setUp(self):
+        super().setUp()
+        self.stubs
+        conn = sqlite3.connect('data/movies.sqlite')
+        self.db = conn.cursor()
+
     def test_movie_duration_buckets(self):
-        res = movie_duration_buckets(db)
+        res = movie_duration_buckets(self.db)
         solution = [
             (30, 292),
             (60, 764),
@@ -34,6 +49,6 @@ class TestMovieDurationBuckets(unittest.TestCase):
             (900, 1),
             (1020, 1)
         ]
-        self.assertIs(type(solution), list)
-        self.assertIs(type(solution[0]), tuple)
+        self.assertIs(type(res), list)
+        self.assertIs(type(res[0]), tuple)
         self.assertEqual(res, solution)

@@ -6,6 +6,9 @@ The goal of this challenge is to use [Window Functions](https://mode.com/sql-tut
 - `PARTITION BY` to select the scoped rows
 - `ORDER BY` to define the order of the rows in which the window function should be applied
 
+## Data
+We know the drill, let's get that `ecommerce.sqlite` file in our `data` directory and let's get started. 
+
 ## Specs
 
 ### Order rank per customer
