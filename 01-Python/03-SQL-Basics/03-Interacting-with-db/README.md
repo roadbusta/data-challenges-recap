@@ -44,7 +44,7 @@ curl https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite 
     <span class="icon"> ⚠️👈 (Click me!)</span>
   </summary>
   
-  DBeaver is installed on Windows and by default does not have enough rights to access files on your Ubuntu filesystem.
+  DBeaver is installed on Windows and by default does not have enough rights to access files on your Ubuntu file system.
 
   As a workaround for this, you can simply copy the downloaded file onto your Windows file system.
   
