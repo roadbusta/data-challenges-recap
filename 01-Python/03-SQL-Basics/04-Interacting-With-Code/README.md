@@ -8,7 +8,7 @@ We will work with the `movies.sqlite` database available at this URL:
 
 Download and save the database file in this challenge `data` directory.
 
-Alternatively you can make a copy of the `movies.sqlite` located in the previous challenge `data` directory, using the command below:
+**Alternatively** you can make a copy of the `movies.sqlite` located in the previous challenge `data` directory, using the command below:
 
 ```bash
 cp ~/code/<user.github_nickname>/01-Python/03-SQL-Basics/03-Interacting-with-db/data/movies.sqlite \
