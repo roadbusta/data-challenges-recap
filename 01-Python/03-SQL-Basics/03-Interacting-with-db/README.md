@@ -26,7 +26,7 @@ As a reminder of Data Sourcing yesterday, here are two ways of doing so:
 
 *Hacker's way:* through the CLI
 1. Open your terminal
-3. `curl <URL> > <target-path>`
+2. `curl <URL> > <target-path>`
 
 ### Movies Database
 We will work with the `movies.sqlite` database, available at this URL:  
