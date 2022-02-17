@@ -22,7 +22,7 @@ As a reminder of Data Sourcing yesterday, here are two ways of doing so:
 1. Open your web browser
 2. Navigate to the URL provided
 3. When prompted to, choose to save the file on your computer
-5. If needed, find the file and move/copy it in the challenge `data` directory
+4. If needed, find the file and move/copy it in the challenge `data` directory
 
 *Hacker's way:* through the CLI
 1. Open your terminal
