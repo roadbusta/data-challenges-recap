@@ -8,6 +8,22 @@ db = conn.cursor()
 
 
 class TestWaitingTime(unittest.TestCase):
+
+    @memoized_property
+    def stubs(self):
+        # Download the database
+        subprocess.call(
+            [
+                "curl", "https://wagon-public-datasets.s3.amazonaws.com/sql_databases/ecommerce.sqlite", "--output",
+                "data/ecommerce.sqlite"
+            ])
+
+    def setUp(self):
+        super().setUp()
+        self.stubs
+        conn = sqlite3.connect('data/ecommerce.sqlite')
+        self.db = conn.cursor()
+
     def test_size_list(self):
         results = get_waiting_time(db)
         self.assertEqual(len(results), 20)
