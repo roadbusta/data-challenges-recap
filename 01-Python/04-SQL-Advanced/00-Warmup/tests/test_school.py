@@ -14,7 +14,7 @@ class TestSchool(unittest.TestCase):
         subprocess.call(
             [
                 "curl", "https://wagon-public-datasets.s3.amazonaws.com/sql_databases/school.sqlite", "--output",
-                "data/movies.sqlite"
+                "data/school.sqlite"
             ])
 
     def setUp(self):
