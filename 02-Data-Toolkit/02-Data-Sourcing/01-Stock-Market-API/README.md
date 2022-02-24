@@ -26,7 +26,7 @@ Here's how it works:
 
 1. API would say: use `https://cloud.iexapis.com/stable/stock/aapl/stats?token=...`
 1. Copy this URL, and replace `cloud.iexapis.com` with `iex.lewagon.com`
-1. You can [try it now](https://iex.lewagon.com/stable/stock/tsla/chart/1d)
+1. You can [try it now](https://iex.lewagon.com/stable/stock/tsla/stats)
 
 ### Using the API
 
