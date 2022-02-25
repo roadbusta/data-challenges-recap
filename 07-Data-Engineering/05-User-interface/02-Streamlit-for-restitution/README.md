@@ -151,6 +151,42 @@ Maybe add some map 🗺
 
 Once we are satisfied, let's push the code to production! 🔥
 
+## Heroku setup
+
+- Sign in to [Heroku](https://signup.heroku.com/)
+- Install the Heroku CLI (Command Line Interface):
+
+<details>
+  <summary markdown='span'><strong> macOS </strong></summary>
+
+  ``` bash
+  brew tap heroku/brew && brew install heroku
+  ```
+
+</details>
+<details>
+  <summary markdown='span'><strong> Ubuntu </strong></summary>
+
+  ``` bash
+  curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+  ```
+
+</details>
+<details>
+  <summary markdown='span'><strong> WSL2 </strong></summary>
+
+  ``` bash
+  curl https://cli-assets.heroku.com/install.sh | sh
+  ```
+
+</details>
+
+- Login the CLI
+
+```bash
+heroku login
+```
+
 ## Deploy
 
 Now that we checked our app works locally, we might want it to run free on a remote server.
