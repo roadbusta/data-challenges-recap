@@ -30,7 +30,7 @@ Where to deploy? You have many different options, we chose Heroku for many reaso
   <summary markdown='span'><strong> Ubuntu </strong></summary>
 
   ``` bash
-  curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+  curl https://cli-assets.heroku.com/install.sh | sh
   ```
 
 </details>
