@@ -3,7 +3,7 @@
 The goal of this challenge is to query the database **from our Python code**.
 
 ## Data
-We will work with the `movies.sqlite` database available at this URL:  
+We will work with the `movies.sqlite` database available at this URL:
 `https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite`
 
 Download and save the database file in this challenge `data` directory.
@@ -12,7 +12,7 @@ Download and save the database file in this challenge `data` directory.
 
 ```bash
 cp ~/code/<user.github_nickname>/01-Python/03-SQL-Basics/03-Interacting-with-db/data/movies.sqlite \
-~/code/<user.github_nickname>/01-Python/03-SQL-Basics/04-Interacting-With-Code/data/movies.sqlite
+~/code/<user.github_nickname>/data-challenges/01-Python/03-SQL-Basics/04-Interacting-With-Code/data/movies.sqlite
 ```
 
 ## Tool
@@ -57,11 +57,11 @@ How many directors are in this database?
 
 ### List of directors
 
-What is the list of all the names of all the directors sorted in alphabetical order?
+What is the list of all the names of all the directors sorted in alphabetical order? Return a list of names (as `str`ings).
 
 ### List of movies about "love"
 
-What are the movies which contain the exact word "love" in their title, sorted in alphabetical order?
+What are the movies which contain the exact word "love" in their title, sorted in alphabetical order? Return a list of movie titles.
 
 ### Number of directors named like...
 
@@ -69,7 +69,7 @@ How many directors contain a word, given by a user, in their name?
 
 ### List of movies longer than...
 
-What are the movies which are longer than a duration, given by a user, sorted in the alphabetical order?
+What are the movies which are longer than a duration, given by a user, sorted in the alphabetical order? Return a list of movie titles.
 
 ## Tips
 

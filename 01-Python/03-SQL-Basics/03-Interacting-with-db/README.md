@@ -29,13 +29,13 @@ As a reminder of Data Sourcing yesterday, here are two ways of doing so:
 2. `curl <URL> > <target-path>`
 
 ### Movies Database
-We will work with the `movies.sqlite` database, available at this URL:  
+We will work with the `movies.sqlite` database, available at this URL:
 `https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite`
 
-In your terminal, Copy/paste and execute the curl command below to download the database into the `data` directory of this challenge.  
+In your terminal, Copy/paste and execute the curl command below to download the database into the `data` directory of this challenge.
 ```bash
-curl https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite \ 
-> ~/code/<user.github_nickname>/01-Python/03-SQL-Basics/03-Interacting-with-db/data/movies.sqlite
+curl https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite \
+> ~/code/<user.github_nickname>/data-challenges/01-Python/03-SQL-Basics/03-Interacting-with-db/data/movies.sqlite
 ```
 
 <details>
@@ -43,11 +43,11 @@ curl https://wagon-public-datasets.s3.amazonaws.com/sql_databases/movies.sqlite 
     <strong>⚠️ For Windows/WSL2 Users </strong>
     <span class="icon"> ⚠️👈 (Click me!)</span>
   </summary>
-  
+
   DBeaver is installed on Windows and by default does not have enough rights to access files on your Ubuntu file system.
 
   As a workaround for this, you can simply copy the downloaded file onto your Windows file system.
-  
+
   Here is an [article](https://lewagon.notion.site/Ubuntu-x-WSL2-x-Windows-7675feb26a644306881b7365d5154204) on how to easily copy or move files between Windows and Ubuntu.
 
   ---
