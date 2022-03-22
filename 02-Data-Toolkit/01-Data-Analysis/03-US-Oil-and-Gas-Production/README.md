@@ -88,7 +88,11 @@ Add a new **markdown** cell:
 ```markdown
 ### Check your code
 ```
-Let's see if our column was successfully converted, copy the following into a new cell:
+Let's see if our column was successfully converted.
+
+For this challenge we **won't be using** `make`. Instead, we will use the testing tool `nbresult` directly in the notebook.
+
+Copy the following into a new cell:
 
 ```python
 month_type = gas_df['Month'].dtype
