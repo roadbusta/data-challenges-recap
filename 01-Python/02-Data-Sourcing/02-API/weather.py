@@ -8,19 +8,44 @@ BASE_URI = "https://www.metaweather.com"
 
 
 def search_city(query):
-    '''Look for a given city and disambiguate between several candidates. Return one city (or None)'''
-    pass  # YOUR CODE HERE
+    '''Look for a given city and disambiguate between several candidates.
+    Returns one city (or None)'''
+
+    url = BASE_URI + "/api/location/search/"
+    payload = {"query" : query}
+    response = requests.get(url, payload ).json()
+    city_data = None
+    if len(response) > 0:
+        city_data = response[0]
+
+    return city_data
+
 
 def weather_forecast(woeid):
     '''Return a 5-element list of weather forecast for a given woeid'''
-    pass  # YOUR CODE HERE
+    url = BASE_URI + f"/api/location/{woeid}/"
+    response = requests.get(url).json()
+    weather_data = response["consolidated_weather"][1:] #Take the next 5 days weather
+    return weather_data
+
 
 def main():
     '''Ask user for a city and display weather forecast'''
     query = input("City?\n> ")
     city = search_city(query)
-    # TODO: Display weather forecast for a given city
-    pass  # YOUR CODE HERE
+
+
+    try:
+        print(f"Here's the weather in {city['title']}")
+        forecast_data = weather_forecast(city['woeid'])
+        for i in forecast_data:
+            print(
+                f"{i['applicable_date']}: {i['weather_state_name']} {round(i['the_temp'],1)}°C "
+            )
+
+
+    except:
+        print(city)
 
 if __name__ == '__main__':
     try:
