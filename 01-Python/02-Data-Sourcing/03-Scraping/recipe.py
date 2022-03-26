@@ -31,7 +31,6 @@ def write_csv(ingredient, recipes):
         for recipe in recipes:
             writer.writerow(recipe)
 
-
 def scrape_from_internet(ingredient, start=1):
     ''' Use `requests` to get the HTML page of search results for given ingredients. '''
     url = f"https://recipes.lewagon.com/"
@@ -45,8 +44,6 @@ def scrape_from_internet(ingredient, start=1):
     else:
         return response.content
 
-
-
 def scrape_from_file(ingredient):
     file = f"pages/{ingredient}.html"
     if path.exists(file):
@@ -54,7 +51,6 @@ def scrape_from_file(ingredient):
     print("Please, run the following command first:")
     print(f'curl "https://recipes.lewagon.com/?search[query]={ingredient}" > pages/{ingredient}.html')
     sys.exit(1)
-
 
 def main():
     if len(sys.argv) > 1:
@@ -75,7 +71,6 @@ def main():
     else:
         print('Usage: python recipe.py INGREDIENT')
         sys.exit(0)
-
 
 if __name__ == '__main__':
     main()
