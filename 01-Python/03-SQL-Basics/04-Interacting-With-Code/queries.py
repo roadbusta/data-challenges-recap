@@ -104,7 +104,7 @@ if __name__ == "__main__":
     # print(f"Number of directors with name containing {name}: ", directors_named_like_count(db, name))
 
     # # Question 5
-    conn.row_factory = sqlite3.Row
-    db = conn.cursor()
-    min = 300
-    print(movies_longer_than(db,min))
+    # conn.row_factory = sqlite3.Row
+    # db = conn.cursor()
+    # min = 300
+    # print(movies_longer_than(db,min))
