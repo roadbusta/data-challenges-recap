@@ -1,9 +1,24 @@
 # pylint:disable=C0111,C0103
+import sqlite3
+
 
 def detailed_orders(db):
     '''return a list of all orders (order_id, customer.contact_name,
     employee.firstname) ordered by order_id'''
-    pass  # YOUR CODE HERE
+
+    query = """
+            SELECT o.OrderID AS order_id,
+	               c.ContactName  AS name,
+	               e.FirstName AS employee
+              FROM orders AS o
+         LEFT JOIN Customers AS c ON o.CustomerID = c.CustomerID
+         LEFT JOIN Employees AS e ON o.EmployeeID = e.EmployeeID
+          ORDER BY 1 ASC
+            """
+
+    db.execute(query)
+
+    return db.fetchall()
 
 def spent_per_customer(db):
     '''return the total amount spent per customer ordered by ascending total
@@ -26,3 +41,10 @@ def orders_per_customer(db):
     of the customer and the number of orders they made (contactName,
     number_of_orders). Order the list by ascending number of orders'''
     pass  # YOUR CODE HERE
+
+if __name__ == "__main__":
+    conn = sqlite3.connect("data/ecommerce.sqlite")
+
+    db = conn.cursor()
+
+    print(detailed_orders(db))
