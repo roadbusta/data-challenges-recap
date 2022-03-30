@@ -82,10 +82,10 @@ if __name__ == "__main__":
     # Initiate connection
     conn = sqlite3.connect("data/movies.sqlite")
 
-    # # Question 1
-    # #Create cursor
-    # db = conn.cursor()
-    # print("Number of directors: ", directors_count(db))
+    # Question 1
+    #Create cursor
+    db = conn.cursor()
+    print("Number of directors: ", directors_count(db))
 
     # # Question 2
     # conn.row_factory = sqlite3.Row
