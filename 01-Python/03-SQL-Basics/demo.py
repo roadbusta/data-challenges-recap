@@ -1,23 +1,18 @@
 import sqlite3
-def num_of_directors(db):
 
-    query = """
-            SELECT *
-            FROM           Country
-            LIMIT 1
-            """
 
-    db.execute(query) #Information is in object c
+### Interpolation  Demonstration ###
+def interpolation(db)
+### Fetch one ###
 
-    rows = db.fetchall() #extract information
+### Fetch all ###
 
-    return rows[0][1]
+###  Rows demonstration ###
 
 
 
 if __name__ == "__main__":
 
-    conn = sqlite3.connect('data/database.sqlite')
-    db = conn.cursor()
-
-    print(num_of_directors(db))
+    ### Interpolation  Demonstration ###
+    # conn = sqlite3.connect('data/database.sqlite')
+    # db = conn.cursor()

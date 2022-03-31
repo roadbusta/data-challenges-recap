@@ -32,7 +32,7 @@ def spent_per_customer(db):
 
     query = """
             SELECT  c.ContactName AS name,
-		            ROUND(SUM(od.UnitPrice),2) AS price
+		            ROUND(SUM(od.UnitPrice * od.Quantity),2) AS price
             FROM    Customers AS c
             JOIN    Orders AS o ON c.CustomerID = o.CustomerID
             JOIN    OrderDetails AS od ON o.OrderID = od.OrderID
@@ -48,7 +48,7 @@ def best_employee(db):
     query = """
             SELECT e.FirstName AS name,
                    e.LastName AS surname,
-                   SUM(od.UnitPrice) AS sold
+                   SUM(od.UnitPrice * od.Quantity) AS sold
               FROM Employees AS e
               JOIN Orders AS o on e.EmployeeID = o.EmployeeID
               JOIN OrderDetails AS od ON o.OrderID = od.OrderID
