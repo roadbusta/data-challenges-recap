@@ -23,28 +23,65 @@ def detailed_orders(db):
 def spent_per_customer(db):
     '''return the total amount spent per customer ordered by ascending total
     amount (to 2 decimal places)
-    Exemple :
+    Example :
         Jean   |   100
         Marc   |   110
         Simon  |   432
         ...
     '''
-    pass  # YOUR CODE HERE
+
+    query = """
+            SELECT  c.ContactName AS name,
+		            ROUND(SUM(od.UnitPrice),2) AS price
+            FROM    Customers AS c
+            JOIN    Orders AS o ON c.CustomerID = o.CustomerID
+            JOIN    OrderDetails AS od ON o.OrderID = od.OrderID
+            GROUP BY 1
+            ORDER BY 2 ASC
+            """
+    db.execute(query)
+    return db.fetchall()
 
 def best_employee(db):
     '''Implement the best_employee method to determine who’s the best employee! By “best employee”, we mean the one who sells the most.
     We expect the function to return a tuple like: ('FirstName', 'LastName', 6000 (the sum of all purchase)). The order of the information is irrelevant'''
-    pass  # YOUR CODE HERE
+    query = """
+            SELECT e.FirstName AS name,
+                   e.LastName AS surname,
+                   SUM(od.UnitPrice) AS sold
+              FROM Employees AS e
+              JOIN Orders AS o on e.EmployeeID = o.EmployeeID
+              JOIN OrderDetails AS od ON o.OrderID = od.OrderID
+          GROUP BY e.EmployeeID
+          ORDER BY 3 DESC
+             LIMIT 1
+            """
+
+    db.execute(query)
+
+
+    return db.fetchall()
 
 def orders_per_customer(db):
     '''TO DO: return a list of tuples where each tupe contains the contactName
     of the customer and the number of orders they made (contactName,
     number_of_orders). Order the list by ascending number of orders'''
-    pass  # YOUR CODE HERE
 
-if __name__ == "__main__":
-    conn = sqlite3.connect("data/ecommerce.sqlite")
+    query = """
+            SELECT c.ContactName AS name,
+                   COUNT(o.OrderID) AS orders
+              FROM Customers c
+              JOIN Orders o ON c.CustomerID = o.CustomerID
+          GROUP BY c.CustomerID
+        ORDER BY 2 ASC
+            """
 
-    db = conn.cursor()
+    db.execute(query)
+    return db.fetchall()
 
-    print(detailed_orders(db))
+# if __name__ == "__main__":
+#     conn = sqlite3.connect("data/ecommerce.sqlite")
+
+#     db = conn.cursor()
+
+#     print(orders_per_customer(db))
