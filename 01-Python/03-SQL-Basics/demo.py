@@ -1,18 +1,26 @@
 import sqlite3
 
+def interpolation(db,weight):
 
-### Interpolation  Demonstration ###
-def interpolation(db)
-### Fetch one ###
+    query = """
+            SELECT player_name,
+	                weight
+                FROM Player
+                WHERE WEIGHT > ?
+                AND NAME LIKE "?"
+            """
+    db.execute(query, (f"{weight}", ) )
 
-### Fetch all ###
-
-###  Rows demonstration ###
-
+    return db.fetchall()
 
 
 if __name__ == "__main__":
 
-    ### Interpolation  Demonstration ###
-    # conn = sqlite3.connect('data/database.sqlite')
-    # db = conn.cursor()
+    #Create a connection
+    conn = sqlite3.connect("data/database.sqlite")
+
+    #Create cursor
+    db = conn.cursor()
+    min_weight = 210
+
+    print(interpolation(db, min_weight))
