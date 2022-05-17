@@ -146,19 +146,31 @@ class Seller:
         orders_sellers = self.data['order_items'][['order_id', 'seller_id'
                                                    ]].drop_duplicates()
 
-        df = orders_sellers.merge(orders_reviews, on='order_id')
+        df = orders_sellers.merge(orders_reviews, on = "order_id")
+
+        df['cost_of_review'] = df.review_score.map({
+            1: 100,
+            2: 50,
+            3: 40,
+            4: 0,
+            5: 0
+        })
+
+
         res = df.groupby('seller_id', as_index=False).agg({
             'dim_is_one_star':
             'mean',
             'dim_is_five_star':
             'mean',
             'review_score':
-            'mean'
+            'mean',
+            'cost_of_review':
+            'sum'
         })
         # Rename columns
         res.columns = [
             'seller_id', 'share_of_one_stars', 'share_of_five_stars',
-            'review_score'
+            'review_score', 'cost_of_reviews'
         ]
 
         return res
